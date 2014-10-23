@@ -16,6 +16,7 @@ class ClothesController < ApplicationController
     @clothe = Clothe.new(params_clothes)
     if @clothe.save
       redirect_to clothes_path
+      flash[:notice] = "create successful!"
     else
       render :new
     end
@@ -27,6 +28,7 @@ class ClothesController < ApplicationController
   def update
     if @clothe.update(params_clothes)
       redirect_to clothe_path(@clothe)
+      flash[:notice] = "update successful!"
     else
       render :edit
     end
@@ -35,6 +37,7 @@ class ClothesController < ApplicationController
   def destroy
     @clothe.destroy
     redirect_to clothes_path
+    flash[:alert] = "delete successful!"
   end
 
   private
