@@ -1,0 +1,9 @@
+<div>
+  <% @clothes.each do |c| %>
+    <%= c.name%>
+    <%= link_to "show", clothe_path(@clothes) %>
+    <p></p>
+    <% end %>
+    <p></p>
+    <%= link_to "New", new_clothe_path %>
+</div>
