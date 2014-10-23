@@ -1,5 +1,11 @@
 <div>
+  <%= link_to 'Edit', edit_clothe_path(@clothe) %>
+  <%= link_to 'delete', clothe_path(@clothe), :method => :delete %>
+  <p></p>
   <%= @clothe.name %>
   <%= @clothe.description %>
   <%= @clothe.price %>
+  <p></p>
+  <%= link_to "Back", clothes_path %>
+
 </div>
