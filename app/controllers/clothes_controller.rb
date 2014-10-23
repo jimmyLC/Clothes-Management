@@ -1,11 +1,11 @@
 class ClothesController < ApplicationController
+  before_action :find_params, :only => [:show, :edit, :update, :destroy]
 
   def index
     @clothes = Clothe.all
   end
 
   def show
-    @clothe = Clothe.find(params[:id])
   end
 
   def new
@@ -20,18 +20,19 @@ class ClothesController < ApplicationController
   end
 
   def edit
-     @clothe = Clothe.find(params[:id])
   end
 
   def update
-     @clothe = Clothe.find(params[:id])
   end
 
   def destroy
-     @clothe = Clothe.find(params[:id])
   end
 
   private
+  def  find_params
+    @clothe = Clothe.find(params[:id])
+  end
+
   def params_clothes
     params.require(:clothe).permit(:name, :description, :price)
   end

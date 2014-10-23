@@ -1,9 +1,10 @@
-<div>
-  <% @clothes.each do |c| %>
-    <%= c.name%>
-    <%= link_to "show", clothe_path(@clothes) %>
-    <p></p>
-    <% end %>
-    <p></p>
-    <%= link_to "New", new_clothe_path %>
-</div>
+<ul>
+<% @clothes.each do |c| %>
+  <li>
+  <%= c.name %>
+  <%= link_to 'Show', clothe_path(clothe) %>
+  <%= link_to 'Edit', clothe_event_path(clothe) %>
+  <%= button_to 'delete', clothe_path(clothe), :method => :delete %>
+  </li>
+<% end %>
+</ul>
