@@ -23,9 +23,13 @@ class ClothesController < ApplicationController
   end
 
   def update
+    @clothe.update(params_clothes)
+    redirect_to clothe_path(@clothe)
   end
 
   def destroy
+    @clothe.destroy
+    redirect_to clothes_path
   end
 
   private
