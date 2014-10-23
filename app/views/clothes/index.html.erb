@@ -3,8 +3,7 @@
   <li>
   <%= clothe.name %>
   <%= link_to 'Show', clothe_path(clothe) %>
-  <%= link_to 'Edit', edit_clothe_path(clothe) %>
-  <%= button_to 'delete', clothe_path(clothe), :method => :delete %>
   </li>
 <% end %>
+<%= link_to "New", new_clothe_path %>
 </ul>
