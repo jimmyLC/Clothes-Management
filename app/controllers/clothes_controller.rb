@@ -14,17 +14,22 @@ class ClothesController < ApplicationController
 
   def create
     @clothe = Clothe.new(params_clothes)
-    @clothe.save
-
-    redirect_to clothes_path
+    if @clothe.save
+      redirect_to clothes_path
+    else
+      render :new
+    end
   end
 
   def edit
   end
 
   def update
-    @clothe.update(params_clothes)
-    redirect_to clothe_path(@clothe)
+    if @clothe.update(params_clothes)
+      redirect_to clothe_path(@clothe)
+    else
+      render :edit
+    end
   end
 
   def destroy
