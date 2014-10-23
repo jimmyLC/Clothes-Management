@@ -1,0 +1,11 @@
+ ✔ 請在 github 再開一個新的 repository @done (14-10-23 20:19)
+ ✔ 例如書籍管理 Book model，欄位包括 name, description, isbn 等等 @done (14-10-23 20:19)
+ ✔ 必填欄位需要驗證 @done (14-10-23 20:19)
+ ✔ 支援 CRUD 操作 @done (14-10-23 20:22)
+ ☐ 列表 index 頁支援分頁
+ ☐ 新增、編輯、刪除之後顯示成功訊息
+ ☐ 部署到 Heroku
+ ☐ 列表頁請改成用 table > tr 表格顯示，而不是課本中的 ul > li
+ ☐ 除了 text_field 跟 textarea 欄位，加一些欄位使用 date, datetime, select 和 radio
+ ☐ 使用 Bootstrap 美化
+ ☐ 套 Bootstrap Theme:
