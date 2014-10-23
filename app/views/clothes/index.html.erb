@@ -1,9 +1,9 @@
 <ul>
-<% @clothes.each do |c| %>
+<% @clothes.each do |clothe| %>
   <li>
-  <%= c.name %>
+  <%= clothe.name %>
   <%= link_to 'Show', clothe_path(clothe) %>
-  <%= link_to 'Edit', clothe_event_path(clothe) %>
+  <%= link_to 'Edit', edit_clothe_path(clothe) %>
   <%= button_to 'delete', clothe_path(clothe), :method => :delete %>
   </li>
 <% end %>
