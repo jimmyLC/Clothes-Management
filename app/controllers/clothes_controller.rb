@@ -2,7 +2,7 @@ class ClothesController < ApplicationController
   before_action :find_params, :only => [:show, :edit, :update, :destroy]
 
   def index
-    @clothes = Clothe.all
+    @clothes = Clothe.page(params[:page]).per(5)
   end
 
   def show
