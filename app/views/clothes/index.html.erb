@@ -4,7 +4,8 @@
   <%= clothe.name %>
   <%= link_to 'Show', clothe_path(clothe) %>
   </li>
+  <%= image_tag clothe.image_url(:thumb).to_s %>
 <% end %>
 <%= link_to "New", new_clothe_path %>
 </ul>
-<%= paginate @clothes %>
+
