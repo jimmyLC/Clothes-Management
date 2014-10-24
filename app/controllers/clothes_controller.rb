@@ -2,7 +2,7 @@ class ClothesController < ApplicationController
   before_action :find_params, :only => [:show, :edit, :update, :destroy]
 
   def index
-    @clothes = Clothe.page(params[:page]).per(5)
+    @clothes = Clothe.all
   end
 
   def show
@@ -46,7 +46,7 @@ class ClothesController < ApplicationController
   end
 
   def params_clothes
-    params.require(:clothe).permit(:name, :description, :price)
+    params.require(:clothe).permit(:name, :description, :price, :image)
   end
 
 end
